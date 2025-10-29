@@ -13,7 +13,7 @@ export default function Home() {
   const [bookmarks, setBookmarks] = useState<Bookmark[]>([]);
 
   const getBookmarks = async () => {
-    const res = await fetch("https://bun.aotearoa.cc/user/bookmarks", {
+    const res = await fetch("/bookmarks", {
       credentials: "include",
     });
 
