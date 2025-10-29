@@ -13,7 +13,7 @@ export function CustomDialog() {
     <div className="bg-gray-90">
       <Dialog>
         <DialogTrigger>
-          <span className="flex gap-2 items-center ">
+          <span className="flex gap-2 items-center bg-gray-100 text-black p-2 rounded-md cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-4 w-4"
