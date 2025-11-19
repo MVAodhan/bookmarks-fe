@@ -85,7 +85,7 @@ const Page = () => {
                 ),
                 title: "AI Integration",
                 description:
-                  "Real-world AI implementation with content summarization and intelligent tagging capabilities.",
+                  "A Simple bookmark tracking application, powerd by N8N automation for summaries and tags ",
                 gradient: "from-blue-500 to-cyan-500",
               },
               {
@@ -106,7 +106,7 @@ const Page = () => {
                 ),
                 title: "Modern Tech Stack",
                 description:
-                  "Built with Next.js, TypeScript, Tailwind CSS, Hono.js and Drizzle ORM for with Postgres.",
+                  "Built with Next.js, TypeScript, Tailwind CSS, Hono.js, Drizzle ORM with Postgres, Clerk auth & N8N automations",
                 gradient: "from-emerald-500 to-teal-500",
               },
             ].map((feature, index) => (
@@ -145,7 +145,7 @@ const Page = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {[
               {
-                name: "Next.js 14",
+                name: "Next.js 15",
                 category: "Framework",
                 color: "bg-black text-white",
               },
@@ -173,6 +173,11 @@ const Page = () => {
                 name: "Hono.js",
                 category: "Library",
                 color: "bg-cyan-400 text-white",
+              },
+              {
+                name: "N8N",
+                category: "Automation",
+                color: "bg-red-400 text-white",
               },
             ].map((tech, index) => (
               <div key={index} className="group text-center">
