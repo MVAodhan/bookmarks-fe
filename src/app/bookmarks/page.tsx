@@ -13,20 +13,15 @@ export default function Home() {
   const [bookmarks, setBookmarks] = useState<Bookmark[]>([]);
 
   const getBookmarks = async () => {
-    const res = await fetch("/bookmarks", {
-      credentials: "include",
-    });
+    const res = await fetch("api/bookmarks");
 
-    if (res.status === 401) {
-      console.log("not authed");
-      return;
-    }
     const data = await res.json();
-    if (data.res.length <= 0) {
-      console.log("not logged in");
-      return;
+
+    if (data.res && data.res.length > 0) {
+      setBookmarks(data.res);
+    } else {
+      setBookmarks([]);
     }
-    setBookmarks(data.res);
   };
 
   useEffect(() => {

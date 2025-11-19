@@ -18,13 +18,14 @@ const UrlCard = () => {
     formState: { errors },
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
-    const res = await fetch("https://bun.aotearoa.cc/user/url", {
+    const res = await fetch("api/bookmarks", {
       method: "POST",
       body: JSON.stringify({
         url: data.url,
       }),
       credentials: "include",
     });
+    console.log(await res.json());
   };
 
   return (

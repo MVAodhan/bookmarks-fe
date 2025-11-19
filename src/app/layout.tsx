@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import {
   ClerkProvider,
   SignInButton,
@@ -37,16 +38,34 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
-          <header className="flex justify-end items-center p-4 gap-4 h-16 bg-gray-900">
-            <SignedOut>
-              <SignInButton />
-              <SignUpButton>
-                <Button className="">Sign Up</Button>
-              </SignUpButton>
-            </SignedOut>
-            <SignedIn>
-              <UserButton />
-            </SignedIn>
+          <header className="flex justify-between items-center p-4 gap-4 h-16 bg-gray-50">
+            <nav className="flex gap-6">
+              <Link
+                href="/"
+                className="text-gray-700 hover:text-gray-900 font-medium"
+              >
+                Home
+              </Link>
+              <Link
+                href="/bookmarks"
+                className="text-gray-700 hover:text-gray-900 font-medium"
+              >
+                Bookmarks
+              </Link>
+            </nav>
+            <div className="flex gap-2">
+              <SignedOut>
+                <SignInButton>
+                  <Button className="">Sign In</Button>
+                </SignInButton>
+                <SignUpButton>
+                  <Button className="">Sign Up</Button>
+                </SignUpButton>
+              </SignedOut>
+              <SignedIn>
+                <UserButton />
+              </SignedIn>
+            </div>
           </header>
           {children}
         </body>
